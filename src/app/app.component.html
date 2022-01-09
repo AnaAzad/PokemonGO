@@ -1,0 +1,48 @@
+<div class="container">  
+    
+  <h1> Pokemon Master Data </h1>  
+ 
+  <table  >  
+    <thead  >  
+        <tr>  
+          <!-- <th>ID</th>   -->
+          <th cell="col">Name</th>  
+          <th cell="col">Number</th>  
+          <th cell="col">Type</th> 
+          <th cell="col">Height</th> 
+          <th cell="col">Weight</th> 
+          <th cell="col">Weaknesses</th> 
+          <th cell="col" colspan="3">Next Evolution</th> 
+        </tr>  
+    </thead>  
+    <tbody>  
+      <tr *ngFor="let student of students | orderBy:'name'" >  
+        <!-- <td>{{ student.id }}</td>   -->
+        <td >{{ student.name }}</td>  
+        <td >{{ student.num }}</td>  
+        <td >{{ student.type }}</td> 
+        <td >{{ student.height }}</td> 
+        <td >{{ student.weight }}</td> 
+        <td >{{ student.weaknesses }}</td> 
+        <td *ngFor="let det of student.next_evolution" >Name:{{ det.name }} Number:{{ det.num }}</td>
+      </tr>  
+    </tbody>  
+  </table>  
+  <!-- <p-table  [value]="students">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>  
+          <th>Name</th>  
+          <th>Number</th>  
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-students>
+      <tr>
+        <td>{{ students.id }}</td>  
+        <td>{{ students.name }}</td>  
+        <td>{{ students.num }}</td> 
+      </tr>
+    </ng-template>
+  </p-table> -->
+
+</div>  
